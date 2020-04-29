@@ -8,3 +8,6 @@
 4. Run command **$ source env/bin/activate**
 5. In the class **Pdf_Extractor** (__init__) method change the value of **Path_to_chromium** variable to your path where you have downloaded chromium driver
 6. Run command **$ python3 script.py**
+
+# Note
+These instructions are for linux system, do implement accordingly if using windows
