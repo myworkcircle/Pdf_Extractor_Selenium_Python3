@@ -7,16 +7,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
-# chrome_options.add_experimental_option('prefs',  {
-#     "download.default_directory": download_dir,
-#     "download.prompt_for_download": False,
-#     "download.directory_upgrade": True,
-#     "plugins.always_open_pdf_externally": False
-#     
-#     }
-# )
 
-class LinkedinBot:
+
+class Pdf_Extractor:
     def __init__(self):
         """ Initialized Chromedriver"""
         download_dir = "/home/pallav/Documents/radicli/pdf_files/"
@@ -27,10 +20,10 @@ class LinkedinBot:
             "plugins.always_open_pdf_externally": True,
             "download.extensions_to_open": "applications/pdf",
             }
-
+        Path_to_chromium = '/home/pallav/Downloads/chromedriver'
         chrome_option = Options()
         chrome_option.add_experimental_option("prefs", profile)
-        self.driver = webdriver.Chrome('/home/pallav/Downloads/chromedriver',chrome_options=chrome_option)
+        self.driver = webdriver.Chrome(Path_to_chromium,chrome_options=chrome_option)
 
    
     def Link_1(self,url):
@@ -118,7 +111,7 @@ class LinkedinBot:
 
 if __name__ == '__main__':
 
-    bot = LinkedinBot()
+    bot = Pdf_Extractor()
     bot.Link_1('https://www.privacy.gov.ph/data-privacy-act-primer/')
     bot.Link_2('https://www.privacy.gov.ph/memorandum-circulars/')
     bot.Link_3('https://www.privacy.gov.ph/advisories/')
