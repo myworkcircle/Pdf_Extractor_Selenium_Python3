@@ -6,5 +6,5 @@
 2. clone this repo
 3. Install virtualenv if you don't have it using **$ sudo apt install virtualenv**
 4. Run command **$ source env/bin/activate**
-5. In the class Pdf_Extractor change the path to chromium driver to your path where you have downloaded chromium driver
+5. In the class Pdf_Extractor change the value of **Path_to_chromium** variable to your path where you have downloaded chromium driver
 6. Run command **$ python3 script.py
